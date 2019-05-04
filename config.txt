@@ -1,6 +1,6 @@
 token=NDgwMjIzNTQ0MTQ0Mjk3OTg1.XM34jg.GZMbEkYVsa2A9zgvcyBg0xd8FC4
 owner=249679075470344192
-prefix=@
+prefix=%
 game= #ReQueZ
 stayinchannel=true
 songinstatus=false
