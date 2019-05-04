@@ -1,6 +1,0 @@
-owner=249679075470344192
-prefix=#
-game=Break | !play
-stayinchannel=true
-songinstatus=false
-token=NDgwMjIzNTQ0MTQ0Mjk3OTg1.XM34jg.GZMbEkYVsa2A9zgvcyBg0xd8FC4
