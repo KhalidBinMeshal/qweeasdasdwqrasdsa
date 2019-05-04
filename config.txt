@@ -1,6 +1,6 @@
-token=NDgwMjIzNTQ0MTQ0Mjk3OTg1.XM34jg.GZMbEkYVsa2A9zgvcyBg0xd8FC4
+token=NDgzOTM5Mjc2MzA0ODA5OTg0.XM3_bA.lxaFIi8exh7WV-FRpvc8QON6b_Q
 owner=249679075470344192
-prefix=%
-game= #ReQueZ
+prefix=@
+game=kH.
 stayinchannel=true
 songinstatus=false
