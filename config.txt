@@ -1,6 +1,6 @@
 token=NDgzOTM5Mjc2MzA0ODA5OTg0.XM3_bA.lxaFIi8exh7WV-FRpvc8QON6b_Q
 owner=249679075470344192
 prefix=&
-game=Khaled,
+game=hi
 stayinchannel=true
 songinstatus=false
