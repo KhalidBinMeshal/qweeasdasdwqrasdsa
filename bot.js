@@ -31,9 +31,7 @@ client.on('ready', () => {
 
 
 
-console.log('mariam ra7t tmot al nas');
 client.on('ready', () => {
-  console.log(`im redey`);
 });
 const x5bz4 = [
    '*** انا اسمي مريم ***',
