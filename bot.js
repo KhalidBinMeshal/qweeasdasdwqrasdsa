@@ -1,24 +1,48 @@
-// Has been made by: -  Noah#8011 (ID: 522436878297858049)
+const Discord = require("discord.js");
+const client = new Discord.Client();
 
-var discord = require("discord.js")
-, client = new discord.Client()
-, colors=require('./colors.json')
-, status=true;
 
-client.on('ready', ()=>{
-   console.log(`I'm ready!!`);
-   
-   // code ::
-   let guild=client.guilds.get('540758186089512963');
-   if(status)
-      for(let i=0;i<colors.length;i++) guild.createRole({name:i+1,color:colors[i]});
-   else
-      for(let i=0;i<colors.length;){
-         let role=guild.roles.find('name',(i+1));
-         if(role) role.delete();
-      }
-   
-   // :: oode
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+hero.on('message', async message => {
+  if(message.author.bot || message.channel.type === 'dm') return;
+  
+  if(!message.content.startsWith(prefix)) return;
+  
+  let messageArray = message.content.split(" ");
+  let args = messageArray.slice(1);
+  let cmd = messageArray[0].substring(prefix.length).toLowerCase();
+  
+  if(cmd === 'mc') {
+      if(!args[0]) return message.reply("please put the server ip");
+      
+      fetch(`https://api.mcsrvstat.us/2/${args[0]}`)
+      .then(res => res.json())
+      .then(async res => {
+
+          let {version, players, online, ip, port, motd, mods, software, map} = res;
+          let i = new RichEmbed();
+
+          if(online === false) {
+              await i.addField(`Status`, `» **Offline**`);
+              await i.setFooter(`The server is offline so i can't fetch the data.`);
+          } else if(online === true) {
+              await i.setAuthor(`${ip}:${port}`, message.author.avatarURL);
+              await i.addField(`Status`, `» **Online**`);
+              await i.addField(`Version`, `» **${res.version}**`);
+              await i.addField(`Players`, `» **${players.online} / ${players.max}**`);
+              if(mods) await i.addField(`Mods`, `» ${mods.names.join(", ")}`);
+              if(software) await i.addField(`Software`, `» ${software}`);
+              if(map) await i.addField(`Map`, `» ${map}`);
+              await i.addField(`MOTD`, `» ${motd.clean.map(r => `**${r}**`).join('\n')}`);
+          }
+          
+          await message.channel.send(i);
+      });
+  }
 });
 
 client.login('token');
