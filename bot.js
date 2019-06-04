@@ -28,7 +28,6 @@ client.on("message", msg => {
        
     }
 });
-  var prefix = *
   hero.on('message', async message => {
   if(message.author.bot || message.channel.type === 'dm') return;
   
