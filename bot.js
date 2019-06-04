@@ -66,4 +66,3 @@ client.on("message", msg => {
   }
 });
   
-client.login("NDgzOTM5Mjc2MzA0ODA5OTg0.XPY-NQ.oYhe1GXyGCWhpmoMDVHIRBYSxYY")
