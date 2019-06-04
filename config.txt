@@ -1,5 +1,0 @@
-owner=249679075470344192
-prefix=&
-game=Khaled,
-stayinchannel=true
-songinstatus=false
