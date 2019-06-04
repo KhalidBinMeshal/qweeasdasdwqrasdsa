@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = &
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -29,6 +28,7 @@ client.on("message", msg => {
        
     }
 });
+  var prefix = *
   hero.on('message', async message => {
   if(message.author.bot || message.channel.type === 'dm') return;
   
